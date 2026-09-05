@@ -54,16 +54,20 @@
   header.top {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
+    gap: 1.05rem;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--ink);
   }
+  .identity {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 0 1.35rem;
+    align-items: center;
+  }
   header.top img {
     display: block;
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
     object-fit: cover;
     object-position: center;
     background: var(--paper);
@@ -79,8 +83,8 @@
   }
   .who {
     color: var(--muted);
-    margin: 0 auto 0.85rem;
-    max-width: 36ch;
+    margin: 0;
+    max-width: 34ch;
   }
   nav.links {
     display: flex;
@@ -255,7 +259,8 @@
   footer a { color: var(--faint); }
 
   @media (max-width: 640px) {
-    header.top img { width: 6.25rem; height: 6.25rem; }
+    .identity { grid-template-columns: 5.1rem 1fr; gap: 0 1rem; }
+    header.top img { width: 5.1rem; height: 5.1rem; }
     header.top h1 { font-size: 1.75rem; }
     .lede { font-size: 1.14rem; }
     .also li { grid-template-columns: 1fr; }
@@ -266,17 +271,19 @@
 <div class="page">
 
   <header class="top">
-    <img src="media/portrait.jpg?v=2" width="720" height="720" alt="Portrait of Arjun Nanduri">
-    <div>
-      <h1>Arjun Nanduri</h1>
-      <p class="who">Computer vision and reinforcement learning. CS at UC Berkeley, class of 2028.</p>
-      <nav class="links" aria-label="Contact">
-        <a href="mailto:arjunnanduri@gmail.com">Email</a>
-        <a href="https://github.com/FavouritePlayer/resume/raw/refs/heads/main/resume_mle.pdf">Resume</a>
-        <a href="https://github.com/FavouritePlayer">GitHub</a>
-        <a href="https://linkedin.com/in/arjunnanduri">LinkedIn</a>
-      </nav>
+    <div class="identity">
+      <img src="media/portrait.jpg?v=2" width="720" height="720" alt="Portrait of Arjun Nanduri">
+      <div>
+        <h1>Arjun Nanduri</h1>
+        <p class="who">Computer vision and reinforcement learning. CS at UC Berkeley, class of 2028.</p>
+      </div>
     </div>
+    <nav class="links" aria-label="Contact">
+      <a href="mailto:arjunnanduri@gmail.com">Email</a>
+      <a href="https://github.com/FavouritePlayer/resume/raw/refs/heads/main/resume_mle.pdf">Resume</a>
+      <a href="https://github.com/FavouritePlayer">GitHub</a>
+      <a href="https://linkedin.com/in/arjunnanduri">LinkedIn</a>
+    </nav>
   </header>
 
   <p class="lede">
