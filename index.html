@@ -63,7 +63,7 @@
     width: 6.25rem;
     height: 6.25rem;
     object-fit: cover;
-    object-position: 50% 18%;
+    object-position: center;
     background: var(--paper);
     border: 1px solid var(--ink);
   }
@@ -311,10 +311,10 @@
       <p class="kicker">Solo · NumPy, dlib, scipy. OpenCV for I/O only.</p>
       <p>I wanted to know what a morph actually is, not wrap <code>cv2.warpAffine</code> and call it a project. The geometry is dlib landmarks, Delaunay triangles, a three-point affine solve into a 2×3 matrix, then inverse warping with bilinear interpolation onto a midway shape.</p>
       <div class="pair">
-        <img src="media/morph-me.jpg" width="720" height="720" alt="Source face used in the morpher: Arjun.">
-        <img src="media/morph-guoguo.jpg" width="720" height="720" alt="Second source face used in the morpher.">
+        <img src="media/morph-me.jpg" width="720" height="720" alt="Arjun with dlib landmarks and Delaunay triangles from the morpher.">
+        <img src="media/morph-guoguo.jpg" width="720" height="720" alt="Second source face with the same landmark overlay from the morpher.">
       </div>
-      <p class="caption">Face crops from the photographs the warp is built from.</p>
+      <p class="caption">dlib landmarks and Delaunay triangles on the source photographs, same overlay the morpher draws before the warp.</p>
       <p>What I would redo: ship a short GIF of the interpolation, not just stills. The interesting part is the in-between frames.</p>
       <p><a href="https://github.com/FavouritePlayer/face-morpher">Repository</a></p>
     </article>
