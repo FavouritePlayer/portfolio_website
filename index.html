@@ -53,17 +53,19 @@
 
   header.top {
     display: grid;
-    grid-template-columns: 5.5rem 1fr;
+    grid-template-columns: 6.25rem 1fr;
     gap: 1.15rem 1.35rem;
-    align-items: start;
+    align-items: center;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid var(--ink);
   }
   header.top img {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 6.25rem;
+    height: 6.25rem;
     object-fit: cover;
+    object-position: 50% 18%;
     background: var(--paper);
+    border: 1px solid var(--ink);
   }
   header.top h1 {
     font-family: var(--font-display);
@@ -186,14 +188,18 @@
   .pair {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.45rem;
+    gap: 1rem;
     margin: 0.9rem 0 0.25rem;
   }
   .pair img {
+    display: block;
     width: 100%;
-    height: 11.5rem;
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center;
     background: #ddd;
+    border: 1px solid var(--line);
   }
   .result {
     border-left: 2px solid var(--accent);
@@ -246,11 +252,10 @@
   footer a { color: var(--faint); }
 
   @media (max-width: 640px) {
-    header.top { grid-template-columns: 4.4rem 1fr; }
-    header.top img { width: 4.4rem; height: 4.4rem; }
+    header.top { grid-template-columns: 4.85rem 1fr; }
+    header.top img { width: 4.85rem; height: 4.85rem; }
     header.top h1 { font-size: 1.75rem; }
     .lede { font-size: 1.14rem; }
-    .pair img { height: 8.5rem; }
     .also li { grid-template-columns: 1fr; }
   }
 </style>
@@ -259,7 +264,7 @@
 <div class="page">
 
   <header class="top">
-    <img src="media/morph-me.jpg" alt="Portrait of Arjun Nanduri">
+    <img src="media/portrait.jpg" width="720" height="720" alt="Portrait of Arjun Nanduri">
     <div>
       <h1>Arjun Nanduri</h1>
       <p class="who">Computer vision and reinforcement learning. CS at UC Berkeley, class of 2028.</p>
@@ -289,7 +294,7 @@
       </video>
       <p class="caption">Terrain comparison. Flat-trained policy vs terrain-adapted, same seeds.</p>
       <figure class="plot">
-        <img src="media/terrain-plot.png" alt="Bar chart: terrain-adapted policy roughly doubles episode reward versus a flat-trained baseline across 10 seeds.">
+        <img src="media/terrain-plot.png" width="1650" height="750" alt="Bar chart: terrain-adapted policy roughly doubles episode reward versus a flat-trained baseline across 10 seeds.">
       </figure>
       <p class="caption">Control vs treatment on TerrainAnt-v0, difficulty 0.4, n=10.</p>
       <div class="result">
@@ -306,10 +311,10 @@
       <p class="kicker">Solo · NumPy, dlib, scipy. OpenCV for I/O only.</p>
       <p>I wanted to know what a morph actually is, not wrap <code>cv2.warpAffine</code> and call it a project. The geometry is dlib landmarks, Delaunay triangles, a three-point affine solve into a 2×3 matrix, then inverse warping with bilinear interpolation onto a midway shape.</p>
       <div class="pair">
-        <img src="media/morph-me.jpg" alt="Source face used in the morpher: Arjun.">
-        <img src="media/morph-guoguo.jpg" alt="Second source face used in the morpher.">
+        <img src="media/morph-me.jpg" width="720" height="720" alt="Source face used in the morpher: Arjun.">
+        <img src="media/morph-guoguo.jpg" width="720" height="720" alt="Second source face used in the morpher.">
       </div>
-      <p class="caption">Two of the source photographs the warp is built from.</p>
+      <p class="caption">Face crops from the photographs the warp is built from.</p>
       <p>What I would redo: ship a short GIF of the interpolation, not just stills. The interesting part is the in-between frames.</p>
       <p><a href="https://github.com/FavouritePlayer/face-morpher">Repository</a></p>
     </article>
@@ -340,19 +345,19 @@
     </div>
 
     <div class="job">
-      <p class="when">Jan – May 2025</p>
-      <h3>Akkadian lemmatization</h3>
-      <p class="org">CDSS, UC Berkeley · Data science research intern</p>
-      <p class="mine">My slice: the BART fine-tune and the alignment pipeline. I also ran the team when it had no actual lead.</p>
-      <p>Low-resource NLP on ORACC cuneiform. Fine-tuned BART for lemma forms and beat the open-source baselines we compared against by 15% on Levenshtein distance. Presented at the UC Berkeley Discovery Symposium.</p>
-    </div>
-
-    <div class="job">
       <p class="when">May – Aug 2025</p>
       <h3>Customs logistics</h3>
       <p class="org">CACI International · Software engineering intern</p>
       <p class="mine">My slice: frontend and backend tickets on an existing Angular / Spring Boot / Postgres app, plus test coverage.</p>
       <p>Built features for U.S. Customs field officers and raised database test coverage about 20%. The useful part was getting productive in a large codebase I did not start.</p>
+    </div>
+
+    <div class="job">
+      <p class="when">Jan – May 2025</p>
+      <h3>Akkadian lemmatization</h3>
+      <p class="org">CDSS, UC Berkeley · Data science research intern</p>
+      <p class="mine">My slice: the BART fine-tune and the alignment pipeline. I also ran the team when it had no actual lead.</p>
+      <p>Low-resource NLP on ORACC cuneiform. Fine-tuned BART for lemma forms and beat the open-source baselines we compared against by 15% on Levenshtein distance. Presented at the UC Berkeley Discovery Symposium.</p>
     </div>
 
     <div class="job">
