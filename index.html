@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arjun Nanduri</title>
 <meta name="description" content="Arjun Nanduri. Computer vision and reinforcement learning. CS at UC Berkeley.">
+<meta name="author" content="Arjun Nanduri">
+<link rel="canonical" href="https://favouriteplayer.github.io/portfolio_website/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arjun Nanduri">
+<meta property="og:description" content="Computer vision and reinforcement learning. CS at UC Berkeley.">
+<meta property="og:url" content="https://favouriteplayer.github.io/portfolio_website/">
+<meta property="og:image" content="https://favouriteplayer.github.io/portfolio_website/media/portrait.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Arjun Nanduri">
+<meta name="twitter:description" content="Computer vision and reinforcement learning. CS at UC Berkeley.">
+<meta name="twitter:image" content="https://favouriteplayer.github.io/portfolio_website/media/portrait.png">
+<link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;600&family=Source+Code+Pro:wght@450;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -44,6 +57,16 @@
     outline: 2px solid var(--accent);
     outline-offset: 3px;
   }
+  .skip {
+    position: absolute;
+    left: 0.75rem;
+    top: -3.5rem;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.4rem 0.7rem;
+    z-index: 2;
+  }
+  .skip:focus { top: 0.75rem; }
 
   .page {
     max-width: 42rem;
@@ -272,12 +295,34 @@
     .identity { gap: 1rem; }
     header.top img { flex-basis: 5.1rem; width: 5.1rem; height: 5.1rem; }
     header.top h1 { font-size: 1.75rem; }
-    .lede { font-size: 1.14rem; }
+    .lede { font-size: 1.05rem; }
     .also li { grid-template-columns: 1fr; }
   }
+  @media (max-width: 380px) {
+    header.top h1 { white-space: normal; }
+  }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Arjun Nanduri",
+  "url": "https://favouriteplayer.github.io/portfolio_website/",
+  "email": "mailto:arjunnanduri@gmail.com",
+  "jobTitle": "Machine learning engineer",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "UC Berkeley"
+  },
+  "sameAs": [
+    "https://github.com/FavouritePlayer",
+    "https://linkedin.com/in/arjunnanduri"
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#selected">Skip to work</a>
 <div class="page">
 
   <header class="top">
@@ -291,8 +336,8 @@
     <nav class="links" aria-label="Contact">
       <a href="mailto:arjunnanduri@gmail.com">Email</a>
       <a href="https://github.com/FavouritePlayer/resume/raw/refs/heads/main/resume_mle.pdf">Resume</a>
-      <a href="https://github.com/FavouritePlayer">GitHub</a>
-      <a href="https://linkedin.com/in/arjunnanduri">LinkedIn</a>
+        <a href="https://github.com/FavouritePlayer" rel="me">GitHub</a>
+        <a href="https://linkedin.com/in/arjunnanduri" rel="me">LinkedIn</a>
     </nav>
   </header>
 
@@ -404,7 +449,7 @@
           <h3>PotBot</h3>
           <p>CalHacks prize. Llama vision checks damage photos, Playwright files the SF 311 request. Team of three; I owned backend and CV. 36 hours.</p>
         </div>
-        <a href="https://devpost.com/software/potbot">devpost</a>
+        <span><a href="https://github.com/FavouritePlayer/CivicSense">repo</a> · <a href="https://devpost.com/software/potbot">devpost</a></span>
       </li>
       <li>
         <div>
